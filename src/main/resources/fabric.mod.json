@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "firefly-in-a-bottle",
+  "version": "${version}",
+  "name": "Firefly in a Bottle",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/firefly-in-a-bottle/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.iceyetiwins.fireflyInABottle.client.FireflyInABottleClient"
+    ],
+    "main": [
+      "com.iceyetiwins.fireflyInABottle.FireflyInABottle"
+    ]
+  },
+  "mixins": [
+    "firefly-in-a-bottle.mixins.json",
+    {
+      "config": "firefly-in-a-bottle.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "1.21.5-alpha.25.5.a"
+  }
+}
