@@ -6,5 +6,6 @@ public class FireflyInABottle implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ModItems.initialize();
     }
 }
