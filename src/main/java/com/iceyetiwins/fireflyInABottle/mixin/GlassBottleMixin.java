@@ -14,6 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -38,7 +39,7 @@ public class GlassBottleMixin {
                     world.setBlockState(blockPos, Blocks.BUSH.getDefaultState());
 
                     world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BEE_POLLINATE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                    //world.emitGameEvent(user, GameEvent.FLUID_PICKUP, blockPos);
+                    world.emitGameEvent(user, GameEvent.BLOCK_CHANGE, blockPos);
 
                     ItemStack fireflyBottle = new ItemStack(ModItems.FIREFLY_BOTTLE);
 

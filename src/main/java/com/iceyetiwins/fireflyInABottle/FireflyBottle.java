@@ -14,6 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
 public class FireflyBottle extends Item {
     public FireflyBottle(Settings settings){
@@ -34,7 +35,7 @@ public class FireflyBottle extends Item {
                     world.setBlockState(blockPos, Blocks.FIREFLY_BUSH.getDefaultState());
 
                     world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BEE_POLLINATE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                    //world.emitGameEvent(user, GameEvent.FLUID_PICKUP, blockPos);
+                    world.emitGameEvent(user, GameEvent.BLOCK_CHANGE, blockPos);
 
                     ItemStack glassBottle = new ItemStack(Items.GLASS_BOTTLE);
 
