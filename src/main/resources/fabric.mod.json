@@ -3,10 +3,14 @@
   "id": "firefly-in-a-bottle",
   "version": "${version}",
   "name": "Firefly in a Bottle",
-  "description": "",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
+  "description": "Put fireflies in bottles and move them between bushes.",
+  "authors": ["Ice Yeti"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/firefly-in-a-bottle",
+    "sources": "https://github.com/IceYetiWins/firefly-in-a-bottle",
+    "issues": "https://github.com/IceYetiWins/firefly-in-a-bottle/issues"
+  },
+  "license": "MIT",
   "icon": "assets/firefly-in-a-bottle/icon.png",
   "environment": "*",
   "entrypoints": {
@@ -27,6 +31,6 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "1.21.5-alpha.25.8.a"
+    "minecraft": "1.21.5"
   }
 }
