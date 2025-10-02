@@ -31,7 +31,7 @@ public class FireflyBottle extends Item {
             Block block = world.getBlockState(blockPos).getBlock();
 
             if (block == Blocks.BUSH) {
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     world.setBlockState(blockPos, Blocks.FIREFLY_BUSH.getDefaultState());
 
                     world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BEE_POLLINATE, SoundCategory.NEUTRAL, 1.0F, 1.0F);

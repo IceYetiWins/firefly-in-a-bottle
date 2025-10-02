@@ -35,7 +35,7 @@ public class GlassBottleMixin {
             Block block = world.getBlockState(blockPos).getBlock();
 
             if (block == Blocks.FIREFLY_BUSH) {
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     world.setBlockState(blockPos, Blocks.BUSH.getDefaultState());
 
                     world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_BEE_POLLINATE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
